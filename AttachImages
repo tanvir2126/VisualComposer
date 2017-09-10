@@ -27,7 +27,7 @@
 
 add_action( 'vc_before_init', 'designas_partners' );
 
-
+// Short code
 
 
 function designas_partners_content_function( $atts, $content ) {
