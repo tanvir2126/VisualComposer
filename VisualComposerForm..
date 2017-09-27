@@ -1,0 +1,61 @@
+<?php
+
+// it si use for only post page ect
+$list = array(
+
+	'post',
+	'page'
+);
+
+vc_set_default_editor_post_types( $list );
+
+//addons running
+
+
+vc_map(array(
+
+
+	'name'		=> esc_html__( 'Service', 'eword' ),
+	'base'		=> 'merchant',
+	'class'		=> '',
+	'category' 	=> esc_html__( 'eWord', 'eword' ),
+	'group'		=> esc_html__( 'eWord', 'eword' ),
+	'icon'		=> get_template_directory_uri() . '/images/vc_Icon/Servcie_icon.jpg',
+	'params'	=> array(
+		array(
+			'type'			=> 'textfield',
+			'holder'		=> 'div',
+			'class'			=> '',
+			'heading'		=> esc_html__( 'title', 'eWord' ),
+			'param_name'	=> 'title',
+			'value'			=> esc_html__( 'Title', 'eWord' ),	
+			'description'	=> esc_html__( 'You may give your service title', 'eWord' ),
+			'group'			=> esc_html__( 'service', 'eword' )	
+
+		),
+		array(
+			'type'			=> 'textfield',
+			'holder'		=> 'div',
+			'class'			=> '',
+			'heading'		=> esc_html__( 'title', 'eWord' ),
+			'param_name'	=> 'icon',
+			'value'			=> esc_html__( 'icon', 'eWord' ),	
+			'description'	=> esc_html__( 'You may give your service title', 'eWord' ),
+			'group'			=> esc_html__( 'service', 'eword' )	
+
+		),
+		array(
+			'type'			=> 'textarea',
+			'holder'		=> 'div',
+			'class'			=> '',
+			'heading'		=> esc_html__( 'content', 'eWord' ),
+			'param_name'	=> 'contenttt',
+			'value'			=> esc_html__( 'Title', 'eWord' ),	
+			'description'	=> esc_html__( 'You may give your service title', 'eWord' ),
+			'group'			=> esc_html__( 'service', 'eword' )	
+
+		)
+
+	)
+
+));
