@@ -1,0 +1,39 @@
+<?php
+
+
+function eWord_shortcode( $atts, $content = null ){
+
+	extract( shortcode_atts( array(
+
+		'icon'		=> '',
+		'title'		=> '',
+		'contenttt'	=> ''
+
+	), $atts ) );
+
+	ob_start();
+
+?>
+
+<div class="
+                        col-xs-12
+                        col-sm-3">
+                        <div class="present-box wow fadeInDown" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+                            <div class="icon-box">
+                                <i class="fa <?php esc_html_e( $icon ); //fa-upload ?> foresize" aria-hidden="true"></i>
+                            </div>
+                            <h4 class="text-center"><?php esc_html_e( $title ); ?></h4>
+                            <p class="text-center">
+                                <?php esc_html_e( $contenttt ); ?>
+                            </p>
+                        </div>
+                    </div>
+
+<?php
+
+	$Service = ob_get_clean();
+	return $Service;
+}
+
+add_shortcode( 'merchant', 'eWord_shortcode' );
+
